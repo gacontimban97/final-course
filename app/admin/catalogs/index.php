@@ -1,14 +1,18 @@
-<?php session_start(); ?>
+<?php require_once "../../check-login.php"; ?>
 <?php require_once "../../../db/mysql.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <title>Danh sach nguoi dung</title>
-  <link rel="stylesheet" type="text/css" href="../../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../public/css/menu-con.css">
+  <link rel="stylesheet" type="text/css" href="../../../public/css/light-bootstrap-dashboard.css">
+  <link rel="stylesheet" type="text/css" href="../../../public/css/pe-icon-7-stroke.css">
   <link rel="stylesheet" type="text/css" href="../../../public/css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  <?php include "../../menu-con.php"; ?>
   <div class="container">
   <h2>Danh sach nguoi dung</h2>
   <div class="row">
@@ -41,5 +45,8 @@
     </tbody>
   </table>
 </div>
+<script src="../../../public/js/jquery.min.js"></script>
+<script src="../../../public/js/bootstrap.min.js"></script>
+<script src="../../../public/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

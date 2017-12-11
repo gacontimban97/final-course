@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php require_once "../../check-login.php"; ?>
 <?php require_once "../../../db/mysql.php"; ?>
 <?php
   if(!isset($_GET["id"])){
@@ -17,10 +17,14 @@
 <html>
   <head>
     <title>Tao catalogs</title>
-    <link rel="stylesheet" type="text/css" href="../../../public/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../public/css/custom.css">
+      <link rel="stylesheet" type="text/css" href="../../../public/css/menu-con.css">
+  <link rel="stylesheet" type="text/css" href="../../../public/css/light-bootstrap-dashboard.css">
+  <link rel="stylesheet" type="text/css" href="../../../public/css/pe-icon-7-stroke.css">
+  <link rel="stylesheet" type="text/css" href="../../../public/css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+    <?php include "../../menu-con.php" ?>
   <div class="wrapper">
     <form method="post" action="update.php">
       <input type="hidden" value="<?php echo $id; ?>" name="id">
@@ -36,14 +40,18 @@
       </div>
       <div class="row">
         <label>Description:</label>
-        <input class="form-control"  type="email" name="email" value="<?php echo $email; ?>">
+        <textarea class="form-control" name="description" value="<?php echo $description; ?>"></textarea>
       </div>
       <br>
       <div class="row">
-        <button class="btn btn-primary">Submit</button>
+        <button class="btn btn-primary" style="border-color: #ff3c3c;
+    color: #ff6b01;">Sửa thông tin</button>
       </div>
     </form>
   </div>
+<script src="../../../public/js/jquery.min.js"></script>
+<script src="../../../public/js/bootstrap.min.js"></script>
+<script src="../../../public/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
 <?php unset($_SESSION["flash"]); ?>

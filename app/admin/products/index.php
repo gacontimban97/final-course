@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php require_once "../../check-login.php"; ?>
 <?php require_once "../../../db/mysql.php"; ?>
 <?php
   define("URL_IMAGE", "http://localhost:8080/final-course/public/uploads/");
@@ -7,11 +7,15 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Danh sach nguoi dung</title>
-  <link rel="stylesheet" type="text/css" href="../../../public/css/bootstrap.min.css">
+  <title>Danh sách sản phẩm</title>
+    <link rel="stylesheet" type="text/css" href="../../../public/css/menu-con.css">
+  <link rel="stylesheet" type="text/css" href="../../../public/css/light-bootstrap-dashboard.css">
+  <link rel="stylesheet" type="text/css" href="../../../public/css/pe-icon-7-stroke.css">
   <link rel="stylesheet" type="text/css" href="../../../public/css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  <?php include "../../menu-con.php" ?>
   <div class="container">
   <h2>Danh sách</h2>
   <div class="row">
@@ -53,4 +57,7 @@
   </table>
 </div>
 </body>
+<script src="../../../public/js/jquery.min.js"></script>
+<script src="../../../public/js/bootstrap.min.js"></script>
+<script src="../../../public/js/bootstrap.bundle.min.js"></script>
 </html>

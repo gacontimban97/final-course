@@ -1,8 +1,42 @@
-.wrapper{
-  width: 350px;
-  height: auto;
-  margin: auto;
+.carousel-inner {
+    border-radius: 5px;
+}
+.wrapperrr{
+	width: 100px;
+	height: auto;
+	margin: auto;
 }
 .flash{
-  color: red;
+	color: red;
 }
+li.page-item-active a {
+    background: pink;
+    color: red;
+}
+.list-group a {
+    color: #a94442;
+    font-size: 19px;
+    padding-left: 35px;
+}
+h4.card-title a {
+    color: red;
+}
+.col-lg-4.col-sm-6.text-center.mb-4 h3 {
+    color: crimson;
+}
+.card-body h5 {
+    color: purple;
+}
+h1.my-4 small {
+    color: chocolate;
+}
+.bg-dark {
+    background-color: red;
+}
+ul.navbar-nav.ml-auto {
+    float: right;
+}
+span.glyphicon.glyphicon-triangle-right {
+    color: red;
+}
+
